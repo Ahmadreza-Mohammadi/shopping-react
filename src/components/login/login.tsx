@@ -30,13 +30,17 @@ export default function Login() {
             name="username"
           />
           <div className="flex justify-between items-center border-gray-400 border-1 rounded-md">
-          <input
-            className="w-full p-2"
-            placeholder="password"
-            type="password"
-            name="password"
-          />
-          <img className="h-4 mr-2 hover:cursor-pointer" src="https://www.svgrepo.com/show/511132/show.svg" alt="" />
+            <input
+              className="w-full p-2 outline-none"
+              placeholder="password"
+              type="password"
+              name="password"
+            />
+            <img
+              className="h-4 mr-2 hover:cursor-pointer"
+              src="https://www.svgrepo.com/show/511132/show.svg"
+              alt=""
+            />
           </div>
         </div>
         <div>
