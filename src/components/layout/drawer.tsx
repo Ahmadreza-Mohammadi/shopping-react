@@ -1,0 +1,47 @@
+import { Box, Button, DrawerContext } from "@chakra-ui/react";
+import {
+  DrawerBackdrop,
+  DrawerBody,
+  DrawerCloseTrigger,
+  DrawerContent,
+  DrawerRoot,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { useNavigate } from "react-router";
+import {
+  ADD_PRODUCTS_ROUTE,
+  PRODUCT_ROUTE,
+  PROFILE_ROUTE,
+  SALE_ROUTE,
+} from "@/router/const";
+
+export const DrawerPanel = () => {
+  const navigate = useNavigate();
+  return (
+    <DrawerRoot>
+      <DrawerBackdrop />
+      <DrawerTrigger asChild>
+        <Button variant="outline" size="sm">
+          Open Drawer
+        </Button>
+      </DrawerTrigger>
+      <DrawerContent>
+        <DrawerContext>
+          {(store) => (
+            <DrawerBody>
+              <Box flexDirection={"column"} display={"flex"} gap={4}>
+                <Button onClick={() => navigate(PROFILE_ROUTE)}>Profile</Button>
+                <Button onClick={() => navigate(PRODUCT_ROUTE)}>Product</Button>
+                <Button onClick={() => navigate(SALE_ROUTE)}>Sales</Button>
+                <Button onClick={() => navigate(ADD_PRODUCTS_ROUTE)}>
+                  Add Product
+                </Button>
+              </Box>
+            </DrawerBody>
+          )}
+        </DrawerContext>
+        <DrawerCloseTrigger />
+      </DrawerContent>
+    </DrawerRoot>
+  );
+};
