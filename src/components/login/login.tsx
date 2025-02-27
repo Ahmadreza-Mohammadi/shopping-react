@@ -2,19 +2,28 @@ import { useNavigate } from "react-router";
 import { userLogin } from "../../api/login.api";
 import { setInLocalStorage } from "../../utils/utils";
 import { HOME_ROUTE } from "../../router/const";
+import { useEffect, useState } from "react";
+import { getFromLocalStorage } from "../../utils/utils";
 
 export default function Login() {
   const navigate = useNavigate();
+  const [token, setToken] = useState();
   const loginHandler = (e) => {
     e.preventDefault();
+    const adminToken = getFromLocalStorage('accessToken');
     const { username, password } = e.target;
     userLogin({ email: username.value, password: password.value })
       .then((res) => {
         setInLocalStorage("accessToken", res.accessToken);
-        navigate(HOME_ROUTE);
+        setToken(res.accessToken)
       })
       .catch((err) => console.log(err));
   };
+  console.log(token)
+  useEffect(() => {
+    token && navigate(HOME_ROUTE)
+    console.log(token)
+  }, [token])
   return (
     <div className="h-screen flex justify-center items-center bg-gray-100">
       <form
@@ -47,6 +56,7 @@ export default function Login() {
           <button
             type="submit"
             className="p-2 rounded-2xl border-black border-1 w-full bg-[#00B207] text-white hover:cursor-pointer"
+
           >
             Login
           </button>

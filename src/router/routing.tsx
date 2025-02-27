@@ -8,7 +8,7 @@ import AddProductPage from "../pages/addProduct/addProductPage";
 import SalesPage from "../pages/sales/salesPage";
 import {
   ADD_PRODUCTS_ROUTE,
-  HOME_ROUTE,
+  HOME_ROUTE, 
   LOGIN_ROUTE,
   PRODUCT_ROUTE,
   PROFILE_ROUTE,
