@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from "react-router";
 
 import Layout from "@/components/layout/layout";
 import LoginPage from "@/pages/login/loginPage";
-import ProfilePage from "@/pages/profile/profilePage";
+import ProfilePage from "@/pages/users/usersPage";
 import SignUpPage from "@/pages/signUp/signUpPage";
 import { useEffect, useState } from "react";
 import { isLogin } from "../api/login.api";
