@@ -1,7 +1,5 @@
 import { getFromLocalStorage } from "@/utils/utils";
 import { Stack, Table } from "@chakra-ui/react";
-import { FiEdit3 } from "react-icons/fi";
-import { RiDeleteBinFill } from "react-icons/ri";
 
 export const SalesTable = () => {
   const data = getFromLocalStorage("soldProducts");
