@@ -4,9 +4,12 @@ import { Provider } from "../ui/provider";
 
 export default function Layout() {
   return (
-    <Provider>
-      <Outlet />
+    <Provider >
+      <div className="flex flex-col justify-start items-start">
       <DrawerPanel />
+      </div>
+      
+      <Outlet />
     </Provider>
   );
 }

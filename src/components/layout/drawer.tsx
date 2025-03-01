@@ -14,7 +14,7 @@ import {
   PROFILE_ROUTE,
   SALE_ROUTE,
 } from "@/router/const";
-
+import { RiMenu3Fill } from "react-icons/ri";
 export const DrawerPanel = () => {
   const navigate = useNavigate();
   return (
@@ -22,7 +22,7 @@ export const DrawerPanel = () => {
       <DrawerBackdrop />
       <DrawerTrigger asChild>
         <Button variant="outline" size="sm">
-          Open Drawer
+        <RiMenu3Fill />
         </Button>
       </DrawerTrigger>
       <DrawerContent>
