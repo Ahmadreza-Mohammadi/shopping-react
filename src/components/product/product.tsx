@@ -23,7 +23,7 @@ import { FaCirclePlus } from "react-icons/fa6";
           </div>
   
           {/* جدول */}
-          <div className="border-4 border-green-500 overflow-y-auto h-72  custom-scrollbar">
+          <div className="border-4 border-green-500 overflow-y-auto h-72  custom-scrollbar ">
             <Tabel />
           </div>
   
