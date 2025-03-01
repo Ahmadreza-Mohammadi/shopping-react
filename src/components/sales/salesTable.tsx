@@ -24,8 +24,8 @@ export const SalesTable = () => {
             {data.map((item) => (
               <Table.Row key={item.id}>
                 <Table.Cell>{item.id}</Table.Cell>
-                <Table.Cell>{item.date}</Table.Cell>
                 <Table.Cell>{item.name}</Table.Cell>
+                <Table.Cell>{item.soldCount}</Table.Cell>
                 <Table.Cell>{item.price}</Table.Cell>
                 <Table.Cell>{item.delivered ? "تحویل داده شده" : "در حال آماده سازی"}</Table.Cell>
                
