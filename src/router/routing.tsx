@@ -6,13 +6,12 @@ import ProfilePage from "@/pages/users/usersPage";
 import SignUpPage from "@/pages/signUp/signUpPage";
 import { useEffect, useState } from "react";
 import { isLogin } from "../api/login.api";
-import AddProductPage from "../pages/addProduct/addProductPage";
 import HomePage from "../pages/home/home";
 import ProductPage from "../pages/product/productPage";
 import SalesPage from "../pages/sales/salesPage";
 import { getFromLocalStorage } from "../utils/utils";
 import {
-  ADD_PRODUCTS_ROUTE,
+  // ADD_PRODUCTS_ROUTE,
   HOME_ROUTE,
   LOGIN_ROUTE,
   PRODUCT_ROUTE,
@@ -59,7 +58,7 @@ function Routing() {
           <Route path={PROFILE_ROUTE} element={<ProfilePage />} />
           <Route path={PRODUCT_ROUTE} element={<ProductPage />} />
           <Route path={SALE_ROUTE} element={<SalesPage />} />
-          <Route path={ADD_PRODUCTS_ROUTE} element={<AddProductPage />} />
+          {/* <Route path={ADD_PRODUCTS_ROUTE} element={<AddProductPage />} /> */}
         </Route>
         {/* </Route> */}
       </Routes>
