@@ -4,13 +4,13 @@ import { useState } from "react";
 import { useNavigate, useNavigation } from "react-router";
 
 export default function SignUp() {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   function registerHandler(e) {
     e.preventDefault();
     userRegister(JSON.stringify({ email, password }));
-    navigate(PROFILE_ROUTE)
+    navigate(PROFILE_ROUTE);
   }
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-gray-100">
