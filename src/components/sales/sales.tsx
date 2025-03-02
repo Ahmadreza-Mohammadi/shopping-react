@@ -27,28 +27,30 @@ export default function Sales() {
   }, []);
   return (
     <>
-    <Header />
-    <div className="flex justify-center items-center h-screen">
-      <div className="flex flex-col justify-center items-center gap-10 rounded-2xl shadow-lg w-[750px] h-[500px] bg-white p-6">
-        <div className="flex flex-row gap-8 items-center">
-          <div className="flex items-center border-4 border-green-800 rounded-md overflow-hidden shadow-lg">
-            <Button colorPalette="green" size="md" className="rounded-none">
-              سرچ کنید
-            </Button>
-            <input
-              type="text"
-              placeholder="سرچ کنید..."
-              className="w-full h-10 px-4 outline-none border-none"
-            />
-            <IoSearch className="w-7 h-7" />
+      <div className="h-screen w-full bg-white">
+        <Header />
+        <div className="flex justify-center items-center h-screen">
+          <div className="flex flex-col justify-center items-center gap-10 rounded-2xl shadow-2xl w-[750px] h-[500px] bg-white p-6">
+            <div className="flex flex-row gap-8 items-center">
+              <div className="flex items-center border-4 border-green-800 rounded-md overflow-hidden shadow-lg bg-gray-700">
+                <Button colorPalette="green" size="md" className="rounded-none">
+                  سرچ کنید
+                </Button>
+                <input
+                  type="text"
+                  placeholder="سرچ کنید..."
+                  className="w-full h-10  outline-none border-none"
+                />
+                <IoSearch className="w-7 h-7" />
+              </div>
+            </div>
+
+            <div className="border-4 border-green-500 overflow-y-auto h-72  custom-scrollbar">
+              <SalesTable />
+            </div>
           </div>
         </div>
-
-        <div className="border-4 border-green-500 overflow-y-auto h-72  custom-scrollbar">
-          <SalesTable />
-        </div>
       </div>
-    </div>
     </>
   );
 }
