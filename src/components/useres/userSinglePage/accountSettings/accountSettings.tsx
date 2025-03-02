@@ -1,4 +1,6 @@
-import { Button, Flex, Heading, Image, Input, VStack } from "@chakra-ui/react";
+import GreenButton from "@/components/shared/buttons/greenButton";
+import InputField from "@/components/shared/inputs/inputField";
+import { Flex, Heading, Image, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 import userImage from "../../../../assets/user/user.png";
 
@@ -19,7 +21,7 @@ function AccountSettings() {
       p={6}
       rounded="lg"
       bg="white"
-      shadow="md"
+      shadow="sm"
       maxW="2xl"
       mx="auto"
       align="center"
@@ -35,20 +37,7 @@ function AccountSettings() {
           border="1px solid"
           borderColor="gray.300"
         />
-        <Button
-          colorScheme="green"
-          variant="solid"
-          borderRadius="3xl"
-          border="1px solid"
-          borderColor="green.500"
-          py={2}
-          px={4}
-          mt={4}
-          transition="all 0.3s ease-in-out"
-          _hover={{ bg: "green.00", transform: "scale(1.05)" }}
-        >
-          ذخیره تغییرات
-        </Button>
+        <GreenButton variant="solid">انتخاب عکس </GreenButton>
       </VStack>
 
       <VStack spacing={5} w="full" maxW="md">
@@ -56,72 +45,40 @@ function AccountSettings() {
           تنظیمات حساب کاربری
         </Heading>
 
-        <Input
+        <InputField
+          label="نام"
           placeholder="نام خود را وارد کنید"
           value={firstName}
           onChange={handleInputChange(setFirstName)}
-          borderColor="gray.300"
-          fontSize="md"
-          py={3}
-          px={4}
-          size="lg"
-          _focus={{
-            borderColor: "green.500",
-            boxShadow: "0 0 0 1px green.500",
-          }}
+          id="firstName"
         />
 
-        <Input
+        <InputField
+          label="نام خانوادگی"
           placeholder="نام خانوادگی خود را وارد کنید"
           value={lastName}
           onChange={handleInputChange(setLastName)}
-          borderColor="gray.300"
-          size="lg"
-          _focus={{
-            borderColor: "green.500",
-            boxShadow: "0 0 0 1px green.500",
-          }}
+          id="lastName"
         />
 
-        <Input
+        <InputField
+          label="ایمیل"
           type="email"
           placeholder="ایمیل خود را وارد کنید"
           value={email}
           onChange={handleInputChange(setEmail)}
-          borderColor="gray.300"
-          size="lg"
-          _focus={{
-            borderColor: "green.500",
-            boxShadow: "0 0 0 1px green.500",
-          }}
+          id="email"
         />
 
-        <Input
+        <InputField
+          label="شماره تلفن"
           placeholder="شماره تلفن خود را وارد کنید"
           value={phoneNumber}
           onChange={handleInputChange(setPhoneNumber)}
-          borderColor="gray.300"
-          size="lg"
-          _focus={{
-            borderColor: "green.500",
-            boxShadow: "0 0 0 1px green.500",
-          }}
+          id="phoneNumber"
         />
 
-        <Button
-          colorScheme="green"
-          variant="solid"
-          borderRadius="3xl"
-          border="1px solid"
-          borderColor="green.500"
-          py={2}
-          px={4}
-          mt={4}
-          transition="all 0.3s ease-in-out"
-          _hover={{ bg: "green.600", transform: "scale(1.05)" }}
-        >
-          ذخیره تغییرات
-        </Button>
+        <GreenButton variant="solid">ذخیره تغییرات</GreenButton>
       </VStack>
     </Flex>
   );
