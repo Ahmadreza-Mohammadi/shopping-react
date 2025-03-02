@@ -14,8 +14,14 @@ import {
   SALE_ROUTE,
 } from "@/router/const";
 
-import { RiMenu3Fill } from "react-icons/ri";
-import { CgProfile } from "react-icons/cg";
+import {
+  RiDashboard2Fill,
+  RiMenu3Fill,
+  RiSearch2Fill,
+  RiSearch2Line,
+  RiSlowDownFill,
+} from "react-icons/ri";
+import { CgHome, CgProfile } from "react-icons/cg";
 import { AiFillProduct } from "react-icons/ai";
 import Logo from "../../logo/logo";
 
@@ -46,6 +52,20 @@ export const DrawerPanel = () => {
               >
                 <Logo />
                 <Button
+                  onClick={() => navigate(ADD_PRODUCTS_ROUTE)}
+                  colorScheme="green"
+                  variant="ghost"
+                  _hover={{
+                    border: "none",
+                    borderColor: "green.500",
+                    bg: "green.100",
+                    boxShadow: "lg",
+                    color: "black",
+                  }}
+                >
+                  Dashboard <CgHome />
+                </Button>
+                <Button
                   onClick={() => navigate(PROFILE_ROUTE)}
                   colorScheme="green"
                   variant="ghost"
@@ -54,6 +74,7 @@ export const DrawerPanel = () => {
                     borderColor: "green.500",
                     bg: "green.100",
                     boxShadow: "lg",
+                    color: "black",
                   }}
                   display="flex"
                   gap={2}
@@ -70,9 +91,10 @@ export const DrawerPanel = () => {
                     borderColor: "green.500",
                     bg: "green.100",
                     boxShadow: "lg",
+                    color: "black",
                   }}
                 >
-                  Product <AiFillProduct />
+                  Products <AiFillProduct />
                 </Button>
 
                 <Button
@@ -84,23 +106,10 @@ export const DrawerPanel = () => {
                     borderColor: "green.500",
                     bg: "green.100",
                     boxShadow: "lg",
+                    color: "black",
                   }}
                 >
-                  Sales
-                </Button>
-
-                <Button
-                  onClick={() => navigate(ADD_PRODUCTS_ROUTE)}
-                  colorScheme="green"
-                  variant="ghost"
-                  _hover={{
-                    border: "none",
-                    borderColor: "green.500",
-                    bg: "green.100",
-                    boxShadow: "lg",
-                  }}
-                >
-                  Add Product
+                  Sales <RiSearch2Line />
                 </Button>
               </Box>
             </DrawerBody>

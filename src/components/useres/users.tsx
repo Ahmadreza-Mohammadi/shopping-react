@@ -1,12 +1,14 @@
 import { Button, Stack, Table } from "@chakra-ui/react";
 import { FaCirclePlus } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
+import Header from "../home/header/header";
 
 export default function Users() {
   return (
-    <div>
+    <div className="w-full h-screen bg-white">
+      <Header />
       <div className="flex justify-center items-center h-screen">
-        <div className="flex flex-col justify-center items-center gap-10 rounded-2xl shadow-lg w-[750px] h-[500px] bg-white p-6">
+        <div className="flex flex-col justify-center items-center gap-10 rounded-2xl shadow-2xl w-[750px] h-[500px] bg-white p-6">
           <div className="flex flex-row gap-8 items-center">
             <FaCirclePlus className="text-green-500 w-10 h-10" />
             <div className="flex items-center border-4 border-green-800 rounded-md overflow-hidden shadow-lg">
