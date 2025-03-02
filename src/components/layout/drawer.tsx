@@ -2,7 +2,6 @@ import { Box, Button, DrawerContext } from "@chakra-ui/react";
 import {
   DrawerBackdrop,
   DrawerBody,
-  DrawerCloseTrigger,
   DrawerContent,
   DrawerRoot,
   DrawerTrigger,
@@ -15,21 +14,27 @@ import {
   SALE_ROUTE,
 } from "@/router/const";
 import { RiMenu3Fill } from "react-icons/ri";
+
 export const DrawerPanel = () => {
   const navigate = useNavigate();
   return (
     <DrawerRoot>
       <DrawerBackdrop />
       <DrawerTrigger asChild>
-        <Button variant="outline" size="sm">
-        <RiMenu3Fill />
+        <Button
+          variant="outline"
+          size="sm"
+          background="green.600"
+          _hover={{ background: "green.400" }} 
+        >
+          <RiMenu3Fill />
         </Button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerContext>
           {(store) => (
             <DrawerBody>
-              <Box flexDirection={"column"} display={"flex"} gap={4}>
+              <Box flexDirection="column" display="flex" gap={4}>
                 <Button onClick={() => navigate(PROFILE_ROUTE)}>Profile</Button>
                 <Button onClick={() => navigate(PRODUCT_ROUTE)}>Product</Button>
                 <Button onClick={() => navigate(SALE_ROUTE)}>Sales</Button>
@@ -40,7 +45,6 @@ export const DrawerPanel = () => {
             </DrawerBody>
           )}
         </DrawerContext>
-        <DrawerCloseTrigger />
       </DrawerContent>
     </DrawerRoot>
   );
