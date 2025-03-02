@@ -10,7 +10,7 @@ function InputField({ label, type, placeholder, value, onChange, id }) {
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="mt-2 w-full p-3 border border-gray-300 rounded-lg"
+        className="w-full p-3 border rounded-lg border-red-400 "
       />
     </div>
   );
