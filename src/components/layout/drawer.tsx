@@ -13,7 +13,13 @@ import {
   PROFILE_ROUTE,
   SALE_ROUTE,
 } from "@/router/const";
-import { RiMenu3Fill } from "react-icons/ri";
+
+import {  RiMenu3Fill } from "react-icons/ri";
+import { CgProfile } from "react-icons/cg";
+import { AiFillProduct } from "react-icons/ai";
+import Logo from "../../logo/logo";
+
+
 
 export const DrawerPanel = () => {
   const navigate = useNavigate();
@@ -34,37 +40,74 @@ export const DrawerPanel = () => {
         <DrawerContext>
           {(store) => (
             <DrawerBody>
-              <Box flexDirection="column" display="flex" gap={4}>
-                <Button
-                  background="gray.400"
-                  _hover={{ background: "gray.600", color: "white" }}
-                  onClick={() => navigate(PROFILE_ROUTE)}
-                >
-                  Profile
-                </Button>
-                <Button
-                  background="gray.400"
-                  _hover={{ background: "gray.600", color: "white" }}
-                  onClick={() => navigate(PRODUCT_ROUTE)}
-                >
-                  Products
-                  
-                </Button>
-                <Button
-                  background="gray.400"
-                  _hover={{ background: "gray.600", color: "white" }}
-                  onClick={() => navigate(SALE_ROUTE)}
-                >
-                  Sales
-                </Button>
-                <Button
-                  background="gray.400"
-                  _hover={{ background: "gray.600", color: "white" }}
-                  onClick={() => navigate(ADD_PRODUCTS_ROUTE)}
-                >
-                  Add Product
-                </Button>
-              </Box>
+
+         <Box flexDirection={"column"} display={"flex"} gap={8} marginTop={20}>
+              <Logo/>
+  <Button 
+    onClick={() => navigate(PROFILE_ROUTE)} 
+    colorScheme="green"
+    variant="ghost"
+    _hover={{
+      border: "none", 
+      borderColor: "green.500", 
+      bg: "green.100", 
+      boxShadow: "lg" 
+     _hover={{ background: "gray.600", color: "white" }}
+    }} 
+    display="flex" 
+    gap={2}
+  >
+    Profile <CgProfile />
+  </Button>
+
+  <Button 
+    onClick={() => navigate(PRODUCT_ROUTE)} 
+    colorScheme="green"
+    variant="ghost"
+    _hover={{
+      border: "none", 
+      borderColor: "green.500", 
+      bg: "green.100",
+      boxShadow: "lg" 
+    _hover={{ background: "gray.600", color: "white" }}
+    }}
+  >
+    Product <AiFillProduct />
+  </Button>
+
+  <Button 
+    onClick={() => navigate(SALE_ROUTE)} 
+    colorScheme="green"
+    variant="ghost"
+    _hover={{
+      border: "none", 
+      borderColor: "green.500", 
+      bg: "green.100",
+      boxShadow: "lg"
+      _hover={{ background: "gray.600", color: "white" }}
+    }}
+  >
+    Sales
+  </Button>
+
+  <Button 
+    onClick={() => navigate(ADD_PRODUCTS_ROUTE)} 
+    colorScheme="green"
+    variant="ghost"
+    _hover={{
+      border: "none", 
+      borderColor: "green.500", 
+      bg: "green.100",
+      boxShadow: "lg"
+                     _hover={{ background: "gray.600", color: "white" }}
+    }}
+  >
+    Add Product
+  </Button>
+</Box>
+
+
+
             </DrawerBody>
           )}
         </DrawerContext>

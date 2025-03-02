@@ -5,7 +5,7 @@ import { RiDeleteBinFill } from "react-icons/ri";
 export const Tabel = () => {
   return (
     <Stack gap="10">
-      <div className="max-h-80  border border-gray-300 rounded-md shadow-lg">
+      <>
         <Table.Root>
           <Table.Header className="sticky top-0 bg-white z-10 shadow-md">
             <Table.Row>
@@ -41,7 +41,7 @@ export const Tabel = () => {
             ))}
           </Table.Body>
         </Table.Root>
-      </div>
+      </>
     </Stack>
   );
 };
