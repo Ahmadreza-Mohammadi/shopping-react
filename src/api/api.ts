@@ -10,5 +10,7 @@ export const header = {
   "Content-Type": "application/json",
 };
 
+export const SALES_URL = "https://67c2066e61d8935867e52eab.mockapi.io/sales"
+
 export const TOKEN =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5";

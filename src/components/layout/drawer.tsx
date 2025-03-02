@@ -2,7 +2,6 @@ import { Box, Button, DrawerContext } from "@chakra-ui/react";
 import {
   DrawerBackdrop,
   DrawerBody,
-  DrawerCloseTrigger,
   DrawerContent,
   DrawerRoot,
   DrawerTrigger,
@@ -14,10 +13,12 @@ import {
   PROFILE_ROUTE,
   SALE_ROUTE,
 } from "@/router/const";
+
 import {  RiMenu3Fill } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import { AiFillProduct } from "react-icons/ai";
 import Logo from "../../logo/logo";
+
 
 
 export const DrawerPanel = () => {
@@ -26,14 +27,20 @@ export const DrawerPanel = () => {
     <DrawerRoot>
       <DrawerBackdrop />
       <DrawerTrigger asChild>
-        <Button variant="outline" size="sm">
-        <RiMenu3Fill />
+        <Button
+          variant="outline"
+          size="sm"
+          background="green.600"
+          _hover={{ background: "green.400" }}
+        >
+          <RiMenu3Fill />
         </Button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerContext>
           {(store) => (
             <DrawerBody>
+
          <Box flexDirection={"column"} display={"flex"} gap={8} marginTop={20}>
               <Logo/>
   <Button 
@@ -45,6 +52,7 @@ export const DrawerPanel = () => {
       borderColor: "green.500", 
       bg: "green.100", 
       boxShadow: "lg" 
+     _hover={{ background: "gray.600", color: "white" }}
     }} 
     display="flex" 
     gap={2}
@@ -61,6 +69,7 @@ export const DrawerPanel = () => {
       borderColor: "green.500", 
       bg: "green.100",
       boxShadow: "lg" 
+    _hover={{ background: "gray.600", color: "white" }}
     }}
   >
     Product <AiFillProduct />
@@ -75,6 +84,7 @@ export const DrawerPanel = () => {
       borderColor: "green.500", 
       bg: "green.100",
       boxShadow: "lg"
+      _hover={{ background: "gray.600", color: "white" }}
     }}
   >
     Sales
@@ -89,6 +99,7 @@ export const DrawerPanel = () => {
       borderColor: "green.500", 
       bg: "green.100",
       boxShadow: "lg"
+                     _hover={{ background: "gray.600", color: "white" }}
     }}
   >
     Add Product
@@ -96,10 +107,10 @@ export const DrawerPanel = () => {
 </Box>
 
 
+
             </DrawerBody>
           )}
         </DrawerContext>
-        <DrawerCloseTrigger />
       </DrawerContent>
     </DrawerRoot>
   );

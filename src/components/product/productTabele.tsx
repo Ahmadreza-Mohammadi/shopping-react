@@ -55,7 +55,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 2,
     date: "1403/12/8",
     name: "سیب",
     price: "42تومان",
@@ -63,7 +63,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 3,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -71,7 +71,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 4,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -79,7 +79,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 5,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -87,7 +87,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 6,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -95,7 +95,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 7,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -103,7 +103,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 8,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -111,7 +111,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 9,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -119,7 +119,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 10,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -127,7 +127,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 11,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -135,7 +135,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 12,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -143,7 +143,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 13,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -151,7 +151,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 14,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -159,7 +159,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 15,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -167,7 +167,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 16,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -175,7 +175,7 @@ const items = [
     sales: "10%",
   },
   {
-    id: 1,
+    id: 17,
     date: "1403/12/8",
     name: "سیب",
     price: "48تومان",
@@ -184,29 +184,4 @@ const items = [
   },
 ];
 
-{
-  /* <table className="w-full text-center ">
-  <thead className="border-8 b">
-    <tr>
-      <th>آیدی</th>
-      <th>تاریخ</th>
-      <th>محصولات</th>
-      <th>قیمت</th>
-      <th>وضعیت</th>
-      <th> فروش</th>
-      <th></th>
-    </tr>
-  </thead>
-<tbody>
-  <tr>
-    <td>#65SFT1</td>
-    <td>1403/05/12</td>
-    <td>سیب</td>
-    <td>48تومان</td>
-    <td>فروخته شد</td>
-    <td>10%</td>
-    <td></td>
-  </tr>
-</tbody>
-</table> */
-}
+

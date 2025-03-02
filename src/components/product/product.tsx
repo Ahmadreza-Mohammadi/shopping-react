@@ -10,7 +10,7 @@ import { FaCirclePlus } from "react-icons/fa6";
       <div className="flex justify-center items-center h-screen">
         <div className="flex flex-col justify-center items-center gap-10 rounded-2xl shadow-lg w-[750px] h-[500px] bg-white p-6">
           
-          {/* جعبه سرچ */}
+          
           <div className="flex flex-row gap-8 items-center">
             <FaCirclePlus className="text-green-500 w-10 h-10" />
             <div className="flex items-center border-4 border-green-800 rounded-md overflow-hidden shadow-lg">
@@ -22,8 +22,9 @@ import { FaCirclePlus } from "react-icons/fa6";
             </div>
           </div>
   
-          {/* جدول */}
-          <div className="border-4 border-green-500 overflow-y-auto h-72  custom-scrollbar ">
+
+          <div className="border-4 border-green-500 overflow-y-auto h-72  custom-scrollbar">
+
             <Tabel />
           </div>
   
