@@ -25,7 +25,7 @@ export const DrawerPanel = () => {
           variant="outline"
           size="sm"
           background="green.600"
-          _hover={{ background: "green.400" }} 
+          _hover={{ background: "green.400" }}
         >
           <RiMenu3Fill />
         </Button>
@@ -35,10 +35,33 @@ export const DrawerPanel = () => {
           {(store) => (
             <DrawerBody>
               <Box flexDirection="column" display="flex" gap={4}>
-                <Button onClick={() => navigate(PROFILE_ROUTE)}>Profile</Button>
-                <Button onClick={() => navigate(PRODUCT_ROUTE)}>Product</Button>
-                <Button onClick={() => navigate(SALE_ROUTE)}>Sales</Button>
-                <Button onClick={() => navigate(ADD_PRODUCTS_ROUTE)}>
+                <Button
+                  background="gray.400"
+                  _hover={{ background: "gray.600", color: "white" }}
+                  onClick={() => navigate(PROFILE_ROUTE)}
+                >
+                  Profile
+                </Button>
+                <Button
+                  background="gray.400"
+                  _hover={{ background: "gray.600", color: "white" }}
+                  onClick={() => navigate(PRODUCT_ROUTE)}
+                >
+                  Products
+                  
+                </Button>
+                <Button
+                  background="gray.400"
+                  _hover={{ background: "gray.600", color: "white" }}
+                  onClick={() => navigate(SALE_ROUTE)}
+                >
+                  Sales
+                </Button>
+                <Button
+                  background="gray.400"
+                  _hover={{ background: "gray.600", color: "white" }}
+                  onClick={() => navigate(ADD_PRODUCTS_ROUTE)}
+                >
                   Add Product
                 </Button>
               </Box>

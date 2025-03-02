@@ -7,6 +7,7 @@ import axios from "axios";
 import { header, SALES_URL } from "@/api/api";
 import { getFromLocalStorage, setInLocalStorage } from "@/utils/utils";
 import Header from "../home/header/header";
+import { IconBase } from "react-icons/lib";
 
 export default function Sales() {
   const [soldData, setSoldData] = useState([]);
@@ -29,7 +30,7 @@ export default function Sales() {
     <>
       <div className="h-screen w-full bg-white">
         <Header />
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center h-screen bg-white">
           <div className="flex flex-col justify-center items-center gap-10 rounded-2xl shadow-2xl w-[750px] h-[500px] bg-white p-6">
             <div className="flex flex-row gap-8 items-center">
               <div className="flex items-center border-4 border-green-800 rounded-md overflow-hidden shadow-lg bg-gray-700">
