@@ -1,6 +1,6 @@
 import { Input } from "@chakra-ui/react";
 
-function InputField({ label, type, placeholder, value, onChange, id }) {
+function InputField({ label, type, placeholder, value, onChange, id ,name}) {
   return (
     <div className="mb-6 w-full">
       <label
@@ -12,6 +12,7 @@ function InputField({ label, type, placeholder, value, onChange, id }) {
       </label>
       <Input
         id={id}
+        name={name}
         type={type}
         value={value}
         onChange={onChange}

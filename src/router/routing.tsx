@@ -4,12 +4,12 @@ import Layout from "@/components/layout/layout";
 import LoginPage from "@/pages/login/loginPage";
 import ProfilePage from "@/pages/users/usersPage";
 import SignUpPage from "@/pages/signUp/signUpPage";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 // import { isLogin } from "../api/login.api";
 import HomePage from "../pages/home/home";
 import ProductPage from "../pages/product/productPage";
 import SalesPage from "../pages/sales/salesPage";
-import { getFromLocalStorage } from "../utils/utils";
+// import { getFromLocalStorage } from "../utils/utils";
 import {
   DASHBOARD_ROUTE,
   // ADD_PRODUCTS_ROUTE,
