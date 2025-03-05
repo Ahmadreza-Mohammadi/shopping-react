@@ -11,22 +11,16 @@ import {
   DASHBOARD_ROUTE,
   HOME_ROUTE,
   INVENTORY_ROUTE,
-
   PRODUCT_ROUTE,
   PROFILE_ROUTE,
   SALE_ROUTE,
 } from "@/router/const";
 
-import {
-  RiDashboard2Fill,
-  RiMenu3Fill,
-  RiSearch2Fill,
-  RiSearch2Line,
-  RiSlowDownFill,
-} from "react-icons/ri";
+import { RiMenu3Fill, RiSearch2Line } from "react-icons/ri";
 import { CgHome, CgProfile } from "react-icons/cg";
 import { AiFillProduct } from "react-icons/ai";
 import Logo from "../../logo/logo";
+import { IoStorefront } from "react-icons/io5";
 
 export const DrawerPanel = () => {
   const navigate = useNavigate();
@@ -126,7 +120,7 @@ export const DrawerPanel = () => {
                     color: "black",
                   }}
                 >
-                  inventory <RiSearch2Line />
+                  لیست موجودی <IoStorefront />
                 </Button>
               </Box>
             </DrawerBody>
