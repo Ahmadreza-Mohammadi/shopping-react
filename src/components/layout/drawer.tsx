@@ -9,6 +9,7 @@ import {
 import { useNavigate } from "react-router";
 import {
   DASHBOARD_ROUTE,
+  HOME_ROUTE,
   INVENTORY_ROUTE,
 
   PRODUCT_ROUTE,
@@ -54,7 +55,7 @@ export const DrawerPanel = () => {
               >
                 <Logo />
                 <Button
-                  onClick={() => navigate(DASHBOARD_ROUTE)}
+                  onClick={() => navigate(HOME_ROUTE)}
                   colorScheme="green"
                   variant="ghost"
                   _hover={{
