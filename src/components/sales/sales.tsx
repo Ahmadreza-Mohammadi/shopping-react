@@ -8,13 +8,16 @@ import { header, SALES_URL } from "@/api/api";
 import { getFromLocalStorage, setInLocalStorage } from "@/utils/utils";
 import Header from "../home/header/header";
 import { IconBase } from "react-icons/lib";
+import { soldProducts } from "@/api/soldProducts";
 
 export default function Sales() {
   const [soldData, setSoldData] = useState([]);
-  // async function x(body) {
-  //   const res = await axios.post(SALES_URL, body, {headers: header})
-  //   return res.data
-  // }
+  async function x() {
+    const res = await axios.post(SALES_URL, JSON.stringify(soldProducts), {
+      headers: header,
+    });
+    return res.data;
+  }
 
   useEffect(() => {
     async function renderSoldProducts() {

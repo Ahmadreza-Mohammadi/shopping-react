@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/drawer";
 import { useNavigate } from "react-router";
 import {
-  ADD_PRODUCTS_ROUTE,
+ DASHBOARD_ROUTE,
   PRODUCT_ROUTE,
   PROFILE_ROUTE,
   SALE_ROUTE,
@@ -52,7 +52,7 @@ export const DrawerPanel = () => {
               >
                 <Logo />
                 <Button
-                  onClick={() => navigate(ADD_PRODUCTS_ROUTE)}
+                  onClick={() => navigate(DASHBOARD_ROUTE)}
                   colorScheme="green"
                   variant="ghost"
                   _hover={{
@@ -63,7 +63,7 @@ export const DrawerPanel = () => {
                     color: "black",
                   }}
                 >
-                  Dashboard <CgHome />
+                  داشبورد <CgHome />
                 </Button>
                 <Button
                   onClick={() => navigate(PROFILE_ROUTE)}
@@ -79,7 +79,7 @@ export const DrawerPanel = () => {
                   display="flex"
                   gap={2}
                 >
-                  Profile <CgProfile />
+                  پروفایل <CgProfile />
                 </Button>
 
                 <Button
@@ -94,7 +94,7 @@ export const DrawerPanel = () => {
                     color: "black",
                   }}
                 >
-                  Products <AiFillProduct />
+                  محصولات <AiFillProduct />
                 </Button>
 
                 <Button
@@ -109,7 +109,7 @@ export const DrawerPanel = () => {
                     color: "black",
                   }}
                 >
-                  Sales <RiSearch2Line />
+                  فروش <RiSearch2Line />
                 </Button>
               </Box>
             </DrawerBody>
