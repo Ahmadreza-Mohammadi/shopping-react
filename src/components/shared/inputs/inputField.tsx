@@ -11,6 +11,7 @@ function InputField({ label, type, placeholder, value, onChange, id ,name}) {
         {label}
       </label>
       <Input
+      color={"black"}
         id={id}
         name={name}
         type={type}

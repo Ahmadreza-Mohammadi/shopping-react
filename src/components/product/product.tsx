@@ -8,7 +8,9 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import GreenButton from "../shared/buttons/greenButton";
 import InputField from "../shared/inputs/inputField";
 import { addProduct, fetchProducts, deleteProduct } from "@/api/apiProduct";
-import Swal from "sweetalert2";
+
+
+// import Swal from "sweetalert2"; // Make sure SweetAlert2 is imported
 
 export default function Products() {
   const [plusBtn, setPlusBtn] = useState<any>(false);
@@ -146,9 +148,9 @@ export default function Products() {
                 <input
                   type="text"
                   placeholder="سرچ کنید..."
-                  className="w-full h-10 px-4 outline-none border-none"
+                  className="w-full h-10 px-4 outline-none border-none serach-bar-text"
                 />
-                <IoSearch className="w-7 h-7" />
+                <IoSearch color="green" className="w-7 h-7" />
               </div>
             </div>
 

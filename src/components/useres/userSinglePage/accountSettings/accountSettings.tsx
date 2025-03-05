@@ -1,7 +1,9 @@
 import GreenButton from "@/components/shared/buttons/greenButton";
 import InputField from "@/components/shared/inputs/inputField";
+
+import { fetchUsers } from "@/api/users.api";
 import { Flex, Heading, Image, VStack } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import userImage from "../../../../assets/user/user.png";
 
 function AccountSettings() {
@@ -9,6 +11,19 @@ function AccountSettings() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  useEffect(() => {
+    async function getUserData() {
+      const users = await fetchUsers();
+      if (users.length > 0) {
+        const user = users[0];
+        setFirstName(user.firstName || "");
+        setLastName(user.lastName || "");
+        setEmail(user.email || "");
+        setPhoneNumber(user.phoneNumber || "");
+      }
+    }
+    getUserData();
+  }, []);
 
   const handleInputChange = (setter) => (e) => {
     setter(e.target.value);
@@ -37,7 +52,7 @@ function AccountSettings() {
           border="1px solid"
           borderColor="gray.300"
         />
-        <GreenButton variant="solid">انتخاب عکس </GreenButton>
+        <GreenButton variant="solid">انتخاب عکس</GreenButton>
       </VStack>
 
       <VStack spacing={5} w="full" maxW="md">
@@ -73,7 +88,7 @@ function AccountSettings() {
         <InputField
           label="شماره تلفن"
           placeholder="شماره تلفن خود را وارد کنید"
-          value={phoneNumber}
+          value={phoneNumber} // نمایش شماره تلفن دریافتی
           onChange={handleInputChange(setPhoneNumber)}
           id="phoneNumber"
         />

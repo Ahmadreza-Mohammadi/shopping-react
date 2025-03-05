@@ -7,26 +7,26 @@ export const Tabel = ({ products,onDelete  }) => {
     <Stack gap="10">
       <Table.Root>
         <Table.Header className="sticky top-0 bg-white z-10 shadow-md">
-          <Table.Row>
-            <Table.ColumnHeader>آیدی</Table.ColumnHeader>
-            <Table.ColumnHeader>تاریخ</Table.ColumnHeader>
-            <Table.ColumnHeader>محصولات</Table.ColumnHeader>
-            <Table.ColumnHeader>قیمت</Table.ColumnHeader>
-            <Table.ColumnHeader>وضعیت</Table.ColumnHeader>
-            <Table.ColumnHeader>فروش</Table.ColumnHeader>
-            <Table.ColumnHeader>تغییرات</Table.ColumnHeader>
+          <Table.Row background={"white"}>
+            <Table.ColumnHeader color={"black"}>آیدی</Table.ColumnHeader>
+            <Table.ColumnHeader color={"black"}>تاریخ</Table.ColumnHeader>
+            <Table.ColumnHeader color={"black"}>محصولات</Table.ColumnHeader>
+            <Table.ColumnHeader color={"black"}>قیمت</Table.ColumnHeader>
+            <Table.ColumnHeader color={"black"}>وضعیت</Table.ColumnHeader>
+            <Table.ColumnHeader color={"black"}>فروش</Table.ColumnHeader>
+            <Table.ColumnHeader color={"black"}>تغییرات</Table.ColumnHeader>
           </Table.Row>
         </Table.Header>
         <Table.Body>
           {products.length > 0 ? (
             products.map((item) => (
-              <Table.Row key={item.id}>
-                <Table.Cell>{item.id}</Table.Cell>
-                <Table.Cell>{item.date}</Table.Cell>
-                <Table.Cell>{item.name}</Table.Cell>
-                <Table.Cell>{item.price}</Table.Cell>
-                <Table.Cell>{item.status}</Table.Cell>
-                <Table.Cell>{item.sales}</Table.Cell>
+              <Table.Row key={item.id} background={"white"}>
+                <Table.Cell color={"black"}>{item.id}</Table.Cell>
+                <Table.Cell color={"black"}>{item.date}</Table.Cell>
+                <Table.Cell color={"black"}>{item.name}</Table.Cell>
+                <Table.Cell color={"black"}>{item.price}</Table.Cell>
+                <Table.Cell color={"black"}>{item.status}</Table.Cell>
+                <Table.Cell color={"black"}>{item.sales}</Table.Cell>
                 <Table.Cell>
                   <div className="flex gap-2">
                     <button>
