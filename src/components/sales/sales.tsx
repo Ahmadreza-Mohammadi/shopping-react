@@ -4,7 +4,7 @@ import { SalesTable } from "./salesTable";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import {  SALES_URL } from "@/api/api";
-import Header from "../home/header/header";
+import { Header } from "../home/header/header";
 
 export default function Sales() {
   const [soldData, setSoldData] = useState([]);

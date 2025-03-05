@@ -3,7 +3,8 @@ import { Button, Stack, Table } from "@chakra-ui/react";
 import { FaCirclePlus } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import { useNavigate } from "react-router";
-import Header from "../home/header/header";
+import { Header } from "../home/header/header";
+
 
 export default function Users() {
   const navigate = useNavigate();
