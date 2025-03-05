@@ -8,7 +8,9 @@ import {
 } from "@/components/ui/drawer";
 import { useNavigate } from "react-router";
 import {
- DASHBOARD_ROUTE,
+  DASHBOARD_ROUTE,
+  INVENTORY_ROUTE,
+
   PRODUCT_ROUTE,
   PROFILE_ROUTE,
   SALE_ROUTE,
@@ -110,6 +112,20 @@ export const DrawerPanel = () => {
                   }}
                 >
                   فروش <RiSearch2Line />
+                </Button>
+                <Button
+                  onClick={() => navigate(INVENTORY_ROUTE)}
+                  colorScheme="green"
+                  variant="ghost"
+                  _hover={{
+                    border: "none",
+                    borderColor: "green.500",
+                    bg: "green.100",
+                    boxShadow: "lg",
+                    color: "black",
+                  }}
+                >
+                  inventory <RiSearch2Line />
                 </Button>
               </Box>
             </DrawerBody>
