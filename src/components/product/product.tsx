@@ -9,6 +9,7 @@ import InputField from "../shared/inputs/inputField";
 import { addProduct, fetchProducts, deleteProduct } from "@/api/apiProduct";
 import { Header } from "../home/header/header";
 
+
 // import Swal from "sweetalert2"; // Make sure SweetAlert2 is imported
 
 export default function Products() {
