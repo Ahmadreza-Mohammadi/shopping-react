@@ -22,7 +22,7 @@ import {
 } from "./const";
 
 function Routing() {
-  const [isUserLogin, setIsUserLogin] = useState(false);
+  // const [isUserLogin, setIsUserLogin] = useState(false);
 
   // useEffect(() => {
   //   const accessToken = getFromLocalStorage("accessToken");
@@ -40,16 +40,14 @@ function Routing() {
     <>
       <Routes>
         <Route path={LOGIN_ROUTE} element={<LoginPage />} />
-        {/* <Route path={HOME_ROUTE} element={<Layout />}> */}
-        <Route index element={<HomePage />} />
         <Route path={SIGNUP_ROUTE} element={<SignUpPage />} />
         <Route path={HOME_ROUTE} element={<Layout />}>
           <Route path={PROFILE_ROUTE} element={<ProfilePage />} />
           <Route path={PROFILE_ROUTE} element={<ProfilePage />} />
           <Route path={DASHBOARD_ROUTE} element={<HomePage />} />
           <Route path={SALE_ROUTE} element={<SalesPage />} />
+          <Route path={PRODUCT_ROUTE} element={<ProductPage />} />
         </Route>
-        {/* </Route> */}
       </Routes>
     </>
   );

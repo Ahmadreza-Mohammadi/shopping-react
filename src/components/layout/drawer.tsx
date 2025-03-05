@@ -52,7 +52,7 @@ export const DrawerPanel = () => {
               >
                 <Logo />
                 <Button
-                  onClick={() => navigate(ADD_PRODUCTS_ROUTE)}
+                  onClick={() => navigate(DASHBOARD_ROUTE)}
                   colorScheme="green"
                   variant="ghost"
                   _hover={{
