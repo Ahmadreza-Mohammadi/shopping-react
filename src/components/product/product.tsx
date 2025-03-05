@@ -8,11 +8,8 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import GreenButton from "../shared/buttons/greenButton";
 import InputField from "../shared/inputs/inputField";
 import { addProduct, fetchProducts, deleteProduct } from "@/api/apiProduct";
-<<<<<<< HEAD
-import Swal from "sweetalert2"; 
-=======
+
 // import Swal from "sweetalert2"; // Make sure SweetAlert2 is imported
->>>>>>> 71ff9973dffbd75fbe1aa0c8abb3a73e97b152cd
 
 export default function Products() {
   const [plusBtn, setPlusBtn] = useState<any>(false);

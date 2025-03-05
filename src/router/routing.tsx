@@ -16,7 +16,6 @@ import { getFromLocalStorage } from "../utils/utils";
 // import { getFromLocalStorage } from "../utils/utils";
 
 import {
-  DASHBOARD_ROUTE,
   // ADD_PRODUCTS_ROUTE,
   HOME_ROUTE,
   LOGIN_ROUTE,
@@ -25,8 +24,7 @@ import {
   SALE_ROUTE,
   SIGNUP_ROUTE,
   INVENTORY_ROUTE,
-  DASHBOARD_ROUTE
-  
+  DASHBOARD_ROUTE,
   USERPROFILE_ROUTE,
 } from "./const";
 

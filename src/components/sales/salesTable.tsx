@@ -1,9 +1,8 @@
 import { getFromLocalStorage } from "@/utils/utils";
 import { Stack, Table } from "@chakra-ui/react";
 
-export const SalesTable = () => {
-  const data = getFromLocalStorage("soldProducts") || [];
-  console.log(data);
+export const SalesTable = ({soldData}) => {
+
 
   return (
     <Stack gap="10">
@@ -19,7 +18,7 @@ export const SalesTable = () => {
             </Table.Row>
           </Table.Header>
           <Table.Body >
-            {data.map((item: any) => (
+            {soldData.map((item: any) =>  (
               <Table.Row background={"white"} color={"black"} key={item.id}>
                 <Table.Cell>{item.id}</Table.Cell>
                 <Table.Cell>{item.name}</Table.Cell>

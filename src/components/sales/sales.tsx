@@ -1,32 +1,22 @@
 import { Button } from "@chakra-ui/react";
 import { IoSearch } from "react-icons/io5";
-import { FaCirclePlus } from "react-icons/fa6";
 import { SalesTable } from "./salesTable";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { header, SALES_URL } from "@/api/api";
-import { getFromLocalStorage, setInLocalStorage } from "@/utils/utils";
+import {  SALES_URL } from "@/api/api";
 import Header from "../home/header/header";
-import { IconBase } from "react-icons/lib";
-import { soldProducts } from "@/api/soldProducts";
 
 export default function Sales() {
   const [soldData, setSoldData] = useState([]);
-  async function x() {
-    const res = await axios.post(SALES_URL, JSON.stringify(soldProducts), {
-      headers: header,
-    });
-    return res.data;
-  }
+ 
 
   useEffect(() => {
     async function renderSoldProducts() {
       const res: any = await axios.get(SALES_URL);
-      // setInLocalStorage("soldProducts", res.data);
       setSoldData(res.data);
-      // console.log(soldData);
+      // console.log(oldData);
     }
-
+console.log(soldData);
     renderSoldProducts();
   }, []);
   return (
@@ -50,7 +40,7 @@ export default function Sales() {
             </div>
 
             <div className="border-4 border-green-500 overflow-y-auto h-72  custom-scrollbar">
-              <SalesTable />
+              <SalesTable soldData={soldData} />
             </div>
           </div>
         </div>
