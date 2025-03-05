@@ -5,3 +5,4 @@ export const PRODUCT_ROUTE = "/product";
 export const SALE_ROUTE = "/sale";
 export const LOGIN_ROUTE = "login";
 export const SIGNUP_ROUTE = "/signup";
+export const USERPROFILE_ROUTE = "/user_profile";

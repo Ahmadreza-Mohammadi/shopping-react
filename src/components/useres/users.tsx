@@ -1,9 +1,12 @@
+import { USERPROFILE_ROUTE } from "@/router/const";
 import { Button, Stack, Table } from "@chakra-ui/react";
 import { FaCirclePlus } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
+import { useNavigate } from "react-router";
 import Header from "../home/header/header";
 
 export default function Users() {
+  const navigate = useNavigate();
   return (
     <div className="w-full h-screen bg-white">
       <Header />
@@ -37,6 +40,7 @@ export default function Users() {
                       <Table.ColumnHeader>رمز کاربر</Table.ColumnHeader>
                       <Table.ColumnHeader>وضعیت حساب</Table.ColumnHeader>
                       <Table.ColumnHeader>تعداد ورود ها</Table.ColumnHeader>
+                      <Table.ColumnHeader>مشاهده کاربر </Table.ColumnHeader>
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
@@ -49,7 +53,9 @@ export default function Users() {
                         <Table.Cell>{item.password}</Table.Cell>
                         <Table.Cell>{item.status}</Table.Cell>
                         <Table.Cell>{item.logIn}</Table.Cell>
-                        <Table.Cell></Table.Cell>
+                        <Table.Cell onClick={() => navigate(USERPROFILE_ROUTE)}>
+                          *
+                        </Table.Cell>
                       </Table.Row>
                     ))}
                   </Table.Body>

@@ -1,15 +1,14 @@
-import { Navigate, Route, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 
 import Layout from "@/components/layout/layout";
 import LoginPage from "@/pages/login/loginPage";
-import ProfilePage from "@/pages/users/usersPage";
 import SignUpPage from "@/pages/signUp/signUpPage";
-import { useEffect, useState } from "react";
+import ProfilePage from "@/pages/users/usersPage";
 // import { isLogin } from "../api/login.api";
+import UserSinglePage from "@/pages/users/userSinglePage";
 import HomePage from "../pages/home/home";
 import ProductPage from "../pages/product/productPage";
 import SalesPage from "../pages/sales/salesPage";
-import { getFromLocalStorage } from "../utils/utils";
 import {
   DASHBOARD_ROUTE,
   // ADD_PRODUCTS_ROUTE,
@@ -19,6 +18,7 @@ import {
   PROFILE_ROUTE,
   SALE_ROUTE,
   SIGNUP_ROUTE,
+  USERPROFILE_ROUTE,
 } from "./const";
 
 function Routing() {
@@ -47,6 +47,7 @@ function Routing() {
           <Route path={DASHBOARD_ROUTE} element={<HomePage />} />
           <Route path={SALE_ROUTE} element={<SalesPage />} />
           <Route path={PRODUCT_ROUTE} element={<ProductPage />} />
+          <Route path={USERPROFILE_ROUTE} element={<UserSinglePage />} />
         </Route>
       </Routes>
     </>
