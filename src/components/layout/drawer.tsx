@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/drawer";
 import { useNavigate } from "react-router";
 import {
-  DASHBOARD_ROUTE,
   HOME_ROUTE,
   INVENTORY_ROUTE,
   PRODUCT_ROUTE,

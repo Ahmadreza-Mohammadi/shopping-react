@@ -55,7 +55,7 @@ export default function Products() {
         sales: input.sale,
         changes: input.changes,
         status: "فعال",
-        id: product.length + 1, 
+        id: product.length + 1,
       };
 
       const addedProduct = await addProduct(newProduct);
@@ -71,8 +71,8 @@ export default function Products() {
         icon: "success",
         draggable: true,
         text: "Your product has been added to the list.",
-        timer: 3000, 
-        showConfirmButton: false, 
+        timer: 3000,
+        showConfirmButton: false,
       });
     } catch (error) {
       console.error("Error adding product:", error);
@@ -80,8 +80,8 @@ export default function Products() {
         title: "Error!",
         text: "There was an issue adding your product.",
         icon: "error",
-        timer: 3000, 
-        showConfirmButton: false, 
+        timer: 3000,
+        showConfirmButton: false,
       });
     }
   };
@@ -108,7 +108,7 @@ export default function Products() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const isDeleted = await deleteProduct(id); 
+          const isDeleted = await deleteProduct(id);
           if (isDeleted) {
             setProducts((prev) => prev.filter((product) => product.id !== id));
 
@@ -147,9 +147,9 @@ export default function Products() {
                 <input
                   type="text"
                   placeholder="سرچ کنید..."
-                  className="w-full h-10 px-4 outline-none border-none"
+                  className="w-full h-10 px-4 outline-none border-none serach-bar-text"
                 />
-                <IoSearch className="w-7 h-7" />
+                <IoSearch color="green" className="w-7 h-7" />
               </div>
             </div>
 
@@ -179,7 +179,9 @@ export default function Products() {
                   value={input.date}
                   onChange={handleInputChange}
                 />
-                {errors.date && <p className="text-red-500 !text-sm">{errors.date}</p>}
+                {errors.date && (
+                  <p className="text-red-500 !text-sm">{errors.date}</p>
+                )}
 
                 <InputField
                   label="محصولات"
@@ -189,7 +191,9 @@ export default function Products() {
                   value={input.product}
                   onChange={handleInputChange}
                 />
-                {errors.product && <p className="text-red-500 !text-sm">{errors.product}</p>}
+                {errors.product && (
+                  <p className="text-red-500 !text-sm">{errors.product}</p>
+                )}
 
                 <InputField
                   label="قیمت"
@@ -199,7 +203,9 @@ export default function Products() {
                   value={input.price}
                   onChange={handleInputChange}
                 />
-                {errors.price && <p className="text-red-500 !text-sm">{errors.price}</p>}
+                {errors.price && (
+                  <p className="text-red-500 !text-sm">{errors.price}</p>
+                )}
 
                 <InputField
                   label="فروش"
@@ -209,7 +215,9 @@ export default function Products() {
                   value={input.sale}
                   onChange={handleInputChange}
                 />
-                {errors.sale && <p className="text-red-500 !text-sm">{errors.sale}</p>}
+                {errors.sale && (
+                  <p className="text-red-500 !text-sm">{errors.sale}</p>
+                )}
 
                 <InputField
                   label="تغییرات"
@@ -219,9 +227,15 @@ export default function Products() {
                   value={input.changes}
                   onChange={handleInputChange}
                 />
-                {errors.changes && <p className="text-red-500 !text-sm">{errors.changes}</p>}
+                {errors.changes && (
+                  <p className="text-red-500 !text-sm">{errors.changes}</p>
+                )}
 
-                <GreenButton type="submit" variant={"submit"} children={"ثبت"} />
+                <GreenButton
+                  type="submit"
+                  variant={"submit"}
+                  children={"ثبت"}
+                />
               </form>
             </div>
           </div>

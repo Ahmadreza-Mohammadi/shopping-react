@@ -1,30 +1,34 @@
 @import "tailwindcss";
 
 .custom-scrollbar::-webkit-scrollbar {
-    width: 8px;
-    padding-right: 50px;
-    margin-right: 20px;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #22c55e;
-    border-radius: 10px;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #15803d;
-  }
-  
-  .home-header {
-    font-weight: bold;
-    font-size: 24px;
-    background: linear-gradient(to right, rgb(4, 165, 4), rgb(0, 102, 255)); /* گرادیان از سبز به آبی */
-    -webkit-background-clip: text; /* برای مرورگرهای مبتنی بر WebKit مانند Safari */
-    background-clip: text; /* متن را به عنوان ماسک برای گرادیان استفاده می‌کند */
-    color: transparent; /* متن را شفاف می‌کند تا گرادیان دیده شود */
+  width: 8px;
+  padding-right: 50px;
+  margin-right: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #15803d;
+}
+
+.home-header {
+  font-weight: bold;
+  font-size: 24px;
+  background: linear-gradient(to right, rgb(4, 165, 4), rgb(0, 102, 255));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.serach-bar-text {
+  color: black;
 }
