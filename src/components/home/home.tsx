@@ -1,4 +1,5 @@
 import Header from "./header/header";
+
 import Logo from "@/logo/logo";
 export default function Home () {
   return (
@@ -13,4 +14,5 @@ export default function Home () {
     </div>
   );
 };
+
 

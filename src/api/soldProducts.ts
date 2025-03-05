@@ -1,4 +1,4 @@
-const soldProducts = [
+export const soldProducts = [
     { name: "قرص گیاهی", id: 1, soldCount: 24, delivered: false, price: 95000 },
     { name: "چای سبز اورگانیک", id: 2, soldCount: 15, delivered: true, price: 50000 },
     { name: "عسل طبیعی", id: 3, soldCount: 30, delivered: true, price: 120000 },

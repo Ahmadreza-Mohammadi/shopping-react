@@ -10,6 +10,7 @@ import { useNavigate } from "react-router";
 import {
   DASHBOARD_ROUTE,
   INVENTORY_ROUTE,
+
   PRODUCT_ROUTE,
   PROFILE_ROUTE,
   SALE_ROUTE,
@@ -64,7 +65,7 @@ export const DrawerPanel = () => {
                     color: "black",
                   }}
                 >
-                  Dashboard <CgHome />
+                  داشبورد <CgHome />
                 </Button>
                 <Button
                   onClick={() => navigate(PROFILE_ROUTE)}
@@ -80,7 +81,7 @@ export const DrawerPanel = () => {
                   display="flex"
                   gap={2}
                 >
-                  Profile <CgProfile />
+                  پروفایل <CgProfile />
                 </Button>
 
                 <Button
@@ -95,7 +96,7 @@ export const DrawerPanel = () => {
                     color: "black",
                   }}
                 >
-                  Products <AiFillProduct />
+                  محصولات <AiFillProduct />
                 </Button>
 
                 <Button
@@ -110,7 +111,7 @@ export const DrawerPanel = () => {
                     color: "black",
                   }}
                 >
-                  Sales <RiSearch2Line />
+                  فروش <RiSearch2Line />
                 </Button>
                 <Button
                   onClick={() => navigate(INVENTORY_ROUTE)}
