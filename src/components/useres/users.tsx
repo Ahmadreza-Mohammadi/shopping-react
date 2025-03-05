@@ -44,30 +44,30 @@ export default function Users() {
             <Stack gap="10">
               <div className="max-h-80 border border-gray-300 rounded-md shadow-lg">
                 <Table.Root>
-                  <Table.Header className="sticky top-0 bg-white z-10 shadow-md">
-                    <Table.Row>
-                      <Table.ColumnHeader>نام کاربر</Table.ColumnHeader>
-                      <Table.ColumnHeader>ایمیل</Table.ColumnHeader>
-                      <Table.ColumnHeader>تاریخ عضویت</Table.ColumnHeader>
-                      <Table.ColumnHeader>نقش کاربر</Table.ColumnHeader>
-                      <Table.ColumnHeader>وضعیت حساب</Table.ColumnHeader>
-                      <Table.ColumnHeader>تعداد ورودها</Table.ColumnHeader>
-                      <Table.ColumnHeader>مشاهده کاربر</Table.ColumnHeader>
+                  <Table.Header className="sticky top-0 bg-white z-10 shadow-2xl">
+                    <Table.Row background={"white"}>
+                      <Table.ColumnHeader color={"black"}>نام کاربر</Table.ColumnHeader>
+                      <Table.ColumnHeader color={"black"}>ایمیل</Table.ColumnHeader>
+                      <Table.ColumnHeader color={"black"}>تاریخ عضویت</Table.ColumnHeader>
+                      <Table.ColumnHeader color={"black"}>نقش کاربر</Table.ColumnHeader>
+                      <Table.ColumnHeader color={"black"}>رمز کاربر</Table.ColumnHeader>
+                      <Table.ColumnHeader color={"black"}>وضعیت حساب</Table.ColumnHeader>
+                      <Table.ColumnHeader color={"black"}>تعداد ورود ها</Table.ColumnHeader>
+                      <Table.ColumnHeader color={"black"}>مشاهده کاربر </Table.ColumnHeader>
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
-                    {users.map((user) => (
-                      <Table.Row key={user.id}>
-                        <Table.Cell>{user.name}</Table.Cell>
-                        <Table.Cell>{user.email}</Table.Cell>
-                        <Table.Cell>{user.date}</Table.Cell>
-                        <Table.Cell>{user.role}</Table.Cell>
-                        <Table.Cell>{user.status}</Table.Cell>
-                        <Table.Cell>{user.logIn}</Table.Cell>
-                        <Table.Cell>
-                          <Button onClick={() => navigate(USERPROFILE_ROUTE)}>
-                            مشاهده
-                          </Button>
+                    {items.map((item) => (
+                      <Table.Row key={item.id} background={"white"}>
+                        <Table.Cell color={"black"}>{item.name}</Table.Cell>
+                        <Table.Cell color={"black"}>{item.email}</Table.Cell>
+                        <Table.Cell color={"black"}>{item.date}</Table.Cell>
+                        <Table.Cell color={"black"}>{item.role}</Table.Cell>
+                        <Table.Cell color={"black"}>{item.password}</Table.Cell>
+                        <Table.Cell color={"black"}>{item.status}</Table.Cell>
+                        <Table.Cell color={"black"}>{item.logIn}</Table.Cell>
+                        <Table.Cell onClick={() => navigate(USERPROFILE_ROUTE)}>
+                          *
                         </Table.Cell>
                       </Table.Row>
                     ))}

@@ -1,4 +1,4 @@
-import React from "react";
+
 import plantImage from "../../../assets/pngs/plant.png";
 import { DrawerPanel } from "@/components/layout/drawer";
 

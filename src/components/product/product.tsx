@@ -8,6 +8,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import GreenButton from "../shared/buttons/greenButton";
 import InputField from "../shared/inputs/inputField";
 import { addProduct, fetchProducts, deleteProduct } from "@/api/apiProduct";
+
 // import Swal from "sweetalert2"; // Make sure SweetAlert2 is imported
 
 export default function Products() {
@@ -54,27 +55,24 @@ export default function Products() {
         sales: input.sale,
         changes: input.changes,
         status: "فعال",
-        id: product.length + 1, // Generate temporary ID (in case backend doesn't)
+        id: product.length + 1,
       };
 
       const addedProduct = await addProduct(newProduct);
 
-      // Assuming the backend responds with the added product
       setProducts((prev) => [...prev, addedProduct]);
 
       setInput({ date: "", product: "", price: "", sale: "", changes: "" });
 
-      // Close the modal after form submission
       setPlusBtn(false);
 
-      // Show draggable SweetAlert after successful product addition
       Swal.fire({
         title: "Product added successfully!",
         icon: "success",
         draggable: true,
         text: "Your product has been added to the list.",
-        timer: 3000, // Automatically close after 3 seconds
-        showConfirmButton: false, // Hide confirm button to auto-close
+        timer: 3000,
+        showConfirmButton: false,
       });
     } catch (error) {
       console.error("Error adding product:", error);
@@ -82,8 +80,8 @@ export default function Products() {
         title: "Error!",
         text: "There was an issue adding your product.",
         icon: "error",
-        timer: 3000, // Automatically close after 3 seconds
-        showConfirmButton: false, // Hide confirm button to auto-close
+        timer: 3000,
+        showConfirmButton: false,
       });
     }
   };
@@ -99,7 +97,6 @@ export default function Products() {
   };
 
   const handleDeleteProduct = async (id: number) => {
-    // Show confirmation modal
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -111,9 +108,8 @@ export default function Products() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const isDeleted = await deleteProduct(id); // Call the deleteProduct API function
+          const isDeleted = await deleteProduct(id);
           if (isDeleted) {
-            // Filter out the deleted product from state
             setProducts((prev) => prev.filter((product) => product.id !== id));
 
             Swal.fire({
@@ -151,9 +147,9 @@ export default function Products() {
                 <input
                   type="text"
                   placeholder="سرچ کنید..."
-                  className="w-full h-10 px-4 outline-none border-none"
+                  className="w-full h-10 px-4 outline-none border-none serach-bar-text"
                 />
-                <IoSearch className="w-7 h-7" />
+                <IoSearch color="green" className="w-7 h-7" />
               </div>
             </div>
 
@@ -183,7 +179,9 @@ export default function Products() {
                   value={input.date}
                   onChange={handleInputChange}
                 />
-                {errors.date && <p className="text-red-500 !text-sm">{errors.date}</p>}
+                {errors.date && (
+                  <p className="text-red-500 !text-sm">{errors.date}</p>
+                )}
 
                 <InputField
                   label="محصولات"
@@ -193,7 +191,9 @@ export default function Products() {
                   value={input.product}
                   onChange={handleInputChange}
                 />
-                {errors.product && <p className="text-red-500 !text-sm">{errors.product}</p>}
+                {errors.product && (
+                  <p className="text-red-500 !text-sm">{errors.product}</p>
+                )}
 
                 <InputField
                   label="قیمت"
@@ -203,7 +203,9 @@ export default function Products() {
                   value={input.price}
                   onChange={handleInputChange}
                 />
-                {errors.price && <p className="text-red-500 !text-sm">{errors.price}</p>}
+                {errors.price && (
+                  <p className="text-red-500 !text-sm">{errors.price}</p>
+                )}
 
                 <InputField
                   label="فروش"
@@ -213,7 +215,9 @@ export default function Products() {
                   value={input.sale}
                   onChange={handleInputChange}
                 />
-                {errors.sale && <p className="text-red-500 !text-sm">{errors.sale}</p>}
+                {errors.sale && (
+                  <p className="text-red-500 !text-sm">{errors.sale}</p>
+                )}
 
                 <InputField
                   label="تغییرات"
@@ -223,9 +227,15 @@ export default function Products() {
                   value={input.changes}
                   onChange={handleInputChange}
                 />
-                {errors.changes && <p className="text-red-500 !text-sm">{errors.changes}</p>}
+                {errors.changes && (
+                  <p className="text-red-500 !text-sm">{errors.changes}</p>
+                )}
 
-                <GreenButton type="submit" variant={"submit"} children={"ثبت"} />
+                <GreenButton
+                  type="submit"
+                  variant={"submit"}
+                  children={"ثبت"}
+                />
               </form>
             </div>
           </div>

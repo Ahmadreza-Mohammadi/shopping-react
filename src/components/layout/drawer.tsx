@@ -8,22 +8,18 @@ import {
 } from "@/components/ui/drawer";
 import { useNavigate } from "react-router";
 import {
- DASHBOARD_ROUTE,
+  HOME_ROUTE,
+  INVENTORY_ROUTE,
   PRODUCT_ROUTE,
   PROFILE_ROUTE,
   SALE_ROUTE,
 } from "@/router/const";
 
-import {
-  RiDashboard2Fill,
-  RiMenu3Fill,
-  RiSearch2Fill,
-  RiSearch2Line,
-  RiSlowDownFill,
-} from "react-icons/ri";
+import { RiMenu3Fill, RiSearch2Line } from "react-icons/ri";
 import { CgHome, CgProfile } from "react-icons/cg";
 import { AiFillProduct } from "react-icons/ai";
 import Logo from "../../logo/logo";
+import { IoStorefront } from "react-icons/io5";
 
 export const DrawerPanel = () => {
   const navigate = useNavigate();
@@ -52,7 +48,7 @@ export const DrawerPanel = () => {
               >
                 <Logo />
                 <Button
-                  onClick={() => navigate(DASHBOARD_ROUTE)}
+                  onClick={() => navigate(HOME_ROUTE)}
                   colorScheme="green"
                   variant="ghost"
                   _hover={{
@@ -110,6 +106,20 @@ export const DrawerPanel = () => {
                   }}
                 >
                   فروش <RiSearch2Line />
+                </Button>
+                <Button
+                  onClick={() => navigate(INVENTORY_ROUTE)}
+                  colorScheme="green"
+                  variant="ghost"
+                  _hover={{
+                    border: "none",
+                    borderColor: "green.500",
+                    bg: "green.100",
+                    boxShadow: "lg",
+                    color: "black",
+                  }}
+                >
+                  لیست موجودی <IoStorefront />
                 </Button>
               </Box>
             </DrawerBody>
