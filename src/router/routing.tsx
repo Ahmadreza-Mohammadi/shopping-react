@@ -9,6 +9,7 @@ import { isLogin } from "../api/login.api";
 import HomePage from "../pages/home/home";
 import ProductPage from "../pages/product/productPage";
 import SalesPage from "../pages/sales/salesPage";
+import InventoryPage from "@/pages/inventory/inventoryPage";
 import { getFromLocalStorage } from "../utils/utils";
 import {
   // ADD_PRODUCTS_ROUTE,
@@ -18,6 +19,9 @@ import {
   PROFILE_ROUTE,
   SALE_ROUTE,
   SIGNUP_ROUTE,
+  INVENTORY_ROUTE,
+  DASHBOARD_ROUTE
+  
 } from "./const";
 
 function Routing() {
@@ -55,9 +59,11 @@ function Routing() {
         />
         <Route path={SIGNUP_ROUTE} element={<SignUpPage />} />
         <Route path={HOME_ROUTE} element={<Layout />}>
+          <Route path={DASHBOARD_ROUTE} element={<HomePage />} />
           <Route path={PROFILE_ROUTE} element={<ProfilePage />} />
           <Route path={PRODUCT_ROUTE} element={<ProductPage />} />
           <Route path={SALE_ROUTE} element={<SalesPage />} />
+          <Route path={INVENTORY_ROUTE} element={<InventoryPage />} />
           {/* <Route path={ADD_PRODUCTS_ROUTE} element={<AddProductPage />} /> */}
         </Route>
         {/* </Route> */}
