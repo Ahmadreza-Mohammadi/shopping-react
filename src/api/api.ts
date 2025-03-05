@@ -10,7 +10,11 @@ export const header = {
   "Content-Type": "application/json",
 };
 
-export const SALES_URL = "https://67c2066e61d8935867e52eab.mockapi.io/sales"
+export const SALES_URL = "https://67c2066e61d8935867e52eab.mockapi.io/sales";
 
 export const TOKEN =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5";
+
+export const API_PRODUCT =
+  "https://6762f10117ec5852cae79fb9.mockapi.io/sofyan/product";
+export const API_USERS = "https://679f6a5424322f8329c39f31.mockapi.io/users";

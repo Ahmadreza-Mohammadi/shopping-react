@@ -1,12 +1,25 @@
+import { fetchUsers } from "@/api/users.api";
 import { USERPROFILE_ROUTE } from "@/router/const";
 import { Button, Stack, Table } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { FaCirclePlus } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import { useNavigate } from "react-router";
 import Header from "../home/header/header";
 
 export default function Users() {
+  const [users, setUsers] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await fetchUsers();
+      setUsers(data);
+    };
+
+    getData();
+  }, []);
+
   return (
     <div className="w-full h-screen bg-white">
       <Header />
@@ -27,9 +40,9 @@ export default function Users() {
             </div>
           </div>
 
-          <div className="border-4 border-green-500 overflow-y-auto h-72  custom-scrollbar">
+          <div className="border-4 border-green-500 overflow-y-auto h-72 custom-scrollbar">
             <Stack gap="10">
-              <div className="max-h-80  border border-gray-300 rounded-md shadow-lg">
+              <div className="max-h-80 border border-gray-300 rounded-md shadow-lg">
                 <Table.Root>
                   <Table.Header className="sticky top-0 bg-white z-10 shadow-md">
                     <Table.Row>
@@ -37,24 +50,24 @@ export default function Users() {
                       <Table.ColumnHeader>ایمیل</Table.ColumnHeader>
                       <Table.ColumnHeader>تاریخ عضویت</Table.ColumnHeader>
                       <Table.ColumnHeader>نقش کاربر</Table.ColumnHeader>
-                      <Table.ColumnHeader>رمز کاربر</Table.ColumnHeader>
                       <Table.ColumnHeader>وضعیت حساب</Table.ColumnHeader>
-                      <Table.ColumnHeader>تعداد ورود ها</Table.ColumnHeader>
-                      <Table.ColumnHeader>مشاهده کاربر </Table.ColumnHeader>
+                      <Table.ColumnHeader>تعداد ورودها</Table.ColumnHeader>
+                      <Table.ColumnHeader>مشاهده کاربر</Table.ColumnHeader>
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
-                    {items.map((item) => (
-                      <Table.Row key={item.id}>
-                        <Table.Cell>{item.name}</Table.Cell>
-                        <Table.Cell>{item.email}</Table.Cell>
-                        <Table.Cell>{item.date}</Table.Cell>
-                        <Table.Cell>{item.role}</Table.Cell>
-                        <Table.Cell>{item.password}</Table.Cell>
-                        <Table.Cell>{item.status}</Table.Cell>
-                        <Table.Cell>{item.logIn}</Table.Cell>
-                        <Table.Cell onClick={() => navigate(USERPROFILE_ROUTE)}>
-                          *
+                    {users.map((user) => (
+                      <Table.Row key={user.id}>
+                        <Table.Cell>{user.name}</Table.Cell>
+                        <Table.Cell>{user.email}</Table.Cell>
+                        <Table.Cell>{user.date}</Table.Cell>
+                        <Table.Cell>{user.role}</Table.Cell>
+                        <Table.Cell>{user.status}</Table.Cell>
+                        <Table.Cell>{user.logIn}</Table.Cell>
+                        <Table.Cell>
+                          <Button onClick={() => navigate(USERPROFILE_ROUTE)}>
+                            مشاهده
+                          </Button>
                         </Table.Cell>
                       </Table.Row>
                     ))}
@@ -68,42 +81,3 @@ export default function Users() {
     </div>
   );
 }
-const items = [
-  {
-    id: 1,
-    name: "saba",
-    email: "sabahabibi@gmail.com",
-    date: "2025/03/02",
-    role: "admin",
-    status: "فعال ",
-    logIn: 5,
-  },
-  {
-    id: 2,
-    name: "saba",
-    email: "sabahabibi@gmail.com",
-    date: "2025/03/02",
-    role: "admin",
-    status: "فعال ",
-    logIn: 5,
-  },
-  {
-    id: 3,
-    name: "saba",
-    email: "sabahabibi@gmail.com",
-    date: "2025/03/02",
-    role: "admin",
-    status: "فعال ",
-    logIn: 5,
-  },
-  {
-    id: 4,
-    name: "saba",
-    email: "sabahabibi@gmail.com",
-    date: "2025/03/02",
-    role: "admin",
-    password: "1234565",
-    status: "فعال ",
-    logIn: 5,
-  },
-];
