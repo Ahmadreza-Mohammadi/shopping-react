@@ -4,14 +4,16 @@ import Layout from "@/components/layout/layout";
 import LoginPage from "@/pages/login/loginPage";
 import SignUpPage from "@/pages/signUp/signUpPage";
 import ProfilePage from "@/pages/users/usersPage";
+
 // import { isLogin } from "../api/login.api";
 import UserSinglePage from "@/pages/users/userSinglePage";
 import HomePage from "../pages/home/home";
 import ProductPage from "../pages/product/productPage";
 import SalesPage from "../pages/sales/salesPage";
-
 import InventoryPage from "@/pages/inventory/inventoryPage";
 import { getFromLocalStorage } from "../utils/utils";
+
+// import { getFromLocalStorage } from "../utils/utils";
 
 import {
   DASHBOARD_ROUTE,
