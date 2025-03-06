@@ -33,14 +33,14 @@ export default function Login() {
           <h1 className="text-center font-bold text-2xl">پنل ورود</h1>
           <input
             className="border-gray-400 border-1 p-2 rounded-md"
-            placeholder="username"
+            placeholder="ایمیل"
             type="text"
             name="username"
           />
           <div className="flex justify-between items-center border-gray-400 border-1 rounded-md">
             <input
               className="w-full p-2 outline-none"
-              placeholder="password"
+              placeholder="رمز عبور"
               type="password"
               name="password"
             />
@@ -60,12 +60,15 @@ export default function Login() {
           </button>
         </div>
       </form>
-      <p className="text-black">
-        اگر ثبت نام نکردید{" "}
-        <a className="text-blue-800" onClick={() => navigate(SIGNUP_ROUTE)}>
-          وارد شوید
+      <div className="flex gap-2 mt-2">
+        <p className="text-black">اگر ثبت نام نکردید</p>
+        <a
+          className="text-blue-800 cursor-pointer"
+          onClick={() => navigate(SIGNUP_ROUTE)}
+        >
+          اینجا کلیک کنید
         </a>
-      </p>
+      </div>
     </div>
   );
 }
