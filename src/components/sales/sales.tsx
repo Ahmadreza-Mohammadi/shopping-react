@@ -3,20 +3,18 @@ import { IoSearch } from "react-icons/io5";
 import { SalesTable } from "./salesTable";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import {  SALES_URL } from "@/api/api";
+import { SALES_URL } from "@/api/api";
 import { Header } from "../home/header/header";
 
 export default function Sales() {
   const [soldData, setSoldData] = useState([]);
- 
 
   useEffect(() => {
     async function renderSoldProducts() {
       const res: any = await axios.get(SALES_URL);
       setSoldData(res.data);
-      // console.log(oldData);
     }
-console.log(soldData);
+
     renderSoldProducts();
   }, []);
   return (

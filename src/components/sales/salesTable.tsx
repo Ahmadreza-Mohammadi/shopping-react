@@ -1,4 +1,3 @@
-import { getFromLocalStorage } from "@/utils/utils";
 import { Stack, Table } from "@chakra-ui/react";
 
 export const SalesTable = ({soldData}) => {

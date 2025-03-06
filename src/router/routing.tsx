@@ -51,7 +51,6 @@ function Routing() {
         <Route path={HOME_ROUTE} element={<Layout />}>
           <Route path={HOME_ROUTE} element={<HomePage />} />
           <Route path={PROFILE_ROUTE} element={<ProfilePage />} />
-          <Route path={PROFILE_ROUTE} element={<ProfilePage />} />
           <Route path={SALE_ROUTE} element={<SalesPage />} />
           <Route path={INVENTORY_ROUTE} element={<InventoryPage />} />
           <Route path={PRODUCT_ROUTE} element={<ProductPage />} />
