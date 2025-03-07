@@ -53,11 +53,11 @@ export default function Users() {
                         ایمیل
                       </Table.ColumnHeader>
                       <Table.ColumnHeader color={"black"}>
-                        {" "}
+                        
                         نام
                       </Table.ColumnHeader>
                       <Table.ColumnHeader color={"black"}>
-                        نام خانوادگی{" "}
+                        نام خانوادگی
                       </Table.ColumnHeader>
                       <Table.ColumnHeader color={"black"}>
                         آدرس
@@ -66,12 +66,12 @@ export default function Users() {
                         آیدی
                       </Table.ColumnHeader>
                       <Table.ColumnHeader color={"black"}>
-                        مشاهده کاربر{" "}
+                        مشاهده کاربر
                       </Table.ColumnHeader>
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
-                    {users.map((item) => (
+                    {users.map((item:any) => (
                       <Table.Row key={item.id} background={"white"}>
                         <Table.Cell color={"black"}>{item.country}</Table.Cell>
                         <Table.Cell color={"black"}>{item.email}</Table.Cell>

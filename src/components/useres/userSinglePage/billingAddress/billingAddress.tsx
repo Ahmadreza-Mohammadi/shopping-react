@@ -12,7 +12,7 @@ function BillingAddress() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-  const handleInputChange = (setter) => (e) => {
+  const handleInputChange = (setter:any) => (e:any) => {
     setter(e.target.value);
   };
 

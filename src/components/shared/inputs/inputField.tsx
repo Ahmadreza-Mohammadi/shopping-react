@@ -1,6 +1,14 @@
 import { Input } from "@chakra-ui/react";
 
-function InputField({ label, type, placeholder, value, onChange, id ,name}) {
+function InputField({
+  label,
+  type,
+  placeholder,
+  value,
+  onChange,
+  id,
+  name,
+}: any) {
   return (
     <div className="mb-6 w-full">
       <label
@@ -11,7 +19,7 @@ function InputField({ label, type, placeholder, value, onChange, id ,name}) {
         {label}
       </label>
       <Input
-      color={"black"}
+        color={"black"}
         id={id}
         name={name}
         type={type}

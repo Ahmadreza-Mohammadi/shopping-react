@@ -1,7 +1,7 @@
 import { userRegister } from "@/api/signup.api";
-import { HOME_ROUTE, PROFILE_ROUTE } from "@/router/const";
+import {  PROFILE_ROUTE } from "@/router/const";
 import { useState } from "react";
-import { useNavigate, useNavigation } from "react-router";
+import { useNavigate } from "react-router";
 
 export default function SignUp() {
   const navigate = useNavigate();

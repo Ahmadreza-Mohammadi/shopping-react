@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react";
 
-function GreenButton({ variant, children, type}) {
+function GreenButton({ variant, children, type}: any) {
   return (
     <Button
     color={"green"}

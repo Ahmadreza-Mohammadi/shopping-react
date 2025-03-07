@@ -1,6 +1,6 @@
 import { Stack, Table } from "@chakra-ui/react";
 
-export const SalesTable = ({soldData}) => {
+export const SalesTable = ({soldData}: any) => {
 
 
   return (
